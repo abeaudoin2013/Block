@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  5words: MyString
+  prompts: MyString
+  imitation: MyText
+
+two:
+  5words: MyString
+  prompts: MyString
+  imitation: MyText
