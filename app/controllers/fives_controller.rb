@@ -1,0 +1,2 @@
+class FivesController < ApplicationController
+end

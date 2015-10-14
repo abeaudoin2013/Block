@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'
-  get '/five', to: 'exercises#five'
-  get '/imitation', to: 'exercises#imitation'
-  get '/prompt', to: 'exercises#prompt'
+  get '/five', to: 'fives#index'
+  get '/imitation', to: 'imitations#index'
+  get '/prompt', to: 'prompts#index'
 
   root 'users#new'
 end
