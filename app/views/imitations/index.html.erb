@@ -1,9 +1,8 @@
 <h1>Here is an excerpt from <%= %> by <%= %></h1>
-<h2>Imitate it</h2>
-<% def document_reader(document) %>
-<% the_text = document.downcase %>
-<% sanitized_text = the_text.gsub("-", " ").delete(",.") %>
-<%	words = sanitized_text.split %>
-<%	{words: words.length} %>
 
-<% end %>
+<h3><%=@piece%></h3>
+
+<h2>Imitate it</h2>
+<br>
+<p><%=@checker%></p>
+<%= render "shared/form" %>
