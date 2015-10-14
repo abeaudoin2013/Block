@@ -12,3 +12,42 @@
 <% the_text = <<DOC 
 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
 DOC %>
+
+def document_reader(document)
+    the_text = document.downcase
+    sanitized_text = the_text.gsub("-", " ").delete(",.")
+    words = sanitized_text.split 
+    # return words
+end
+
+def input_reader(input)
+    the_text = input.downcase
+    sanitized_text = the_text.gsub("-", " ").delete(",.")
+    inputs = sanitized_text.split 
+    # return inputs
+end
+
+for word in words
+    for input_word in inputs
+        if word = input_word
+            puts word
+        else 
+            nil
+        end
+    end 
+end
+
+the_text = <<DOC 
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+DOC
+
+input_text = <<DOC 
+"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+DOC
+
+document_reader(the_text)
+
+input_reader(input_text)
+
+
+
