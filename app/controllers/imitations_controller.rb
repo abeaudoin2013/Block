@@ -1,0 +1,2 @@
+class ImitationsController < ApplicationController
+end
