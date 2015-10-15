@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   resources :users
-  # resources :documents
+
   get '/documents', to: 'documents#index'
 
+
+  post '/imiation', to: 'imitations#create', as: :imitation_doc
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'
