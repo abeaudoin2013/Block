@@ -47,13 +47,34 @@
 		var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
 		initializeClock(id, tenMinsLater);
 	}
+
+	// function findLetter() {
+		$(document).ready(function(){
+		var docBuilder = [];
+		var piece = $('#piece').val();
+		console.log($('#imitation_typer').val());
+		console.log(piece);
+		var lowcasePiece = piece.toLowerCase();
+
+		$('#imitation_typer').on("keyup", function(event){
+			var charNum = event.which;
+			var toLetter = String.fromCharCode(charNum);
+			docBuilder.push(toLetter.toLowerCase());
+			var totalLettersTyped = $('#imitation_typer').val().length
+				if ($('#piece').text().slice(0, totalLettersTyped) === $('#imitation_typer').val()) {
+					$('.matchingStatus').text("matching");
+				} else {
+					$('.matchingStatus').text("not matching");
+				}
+			});
+		});
+
 $(document).on('page:change ready', function(){
 	$( ".clickme" ).click(function() {
 	$( ".docbody" ).show( "slow" );
 	})
 	});
-	////
-////
+
 
 function validateText() {
 	regex = /\s+/gi;

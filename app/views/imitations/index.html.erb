@@ -1,8 +1,12 @@
 <h1>Here is an excerpt from <%= %> by <%= %></h1>
 
-<h3><%=@piece%></h3>
+<h3 id="piece"><%=@piece%></h3>
 
 <h2>Imitate it</h2>
 <br>
 <p><%=@checker%></p>
 <%= render "form" %>
+
+<div id="clockdiv" onclick="setTenMins('clockdiv')">Start</div>
+
+<p class='matchingStatus'></p>
