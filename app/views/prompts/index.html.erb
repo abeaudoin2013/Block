@@ -1,0 +1,13 @@
+<%= @prompt.setup %>
+<%= form_for @document, url: prompts_path do |f| %>
+	<p>
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+<div id="clockdiv" onclick="setTenMins('clockdiv')">Start</div>
+
+
