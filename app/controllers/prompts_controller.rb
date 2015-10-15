@@ -1,5 +1,5 @@
 class PromptsController < ApplicationController
 	def index
-		@prompt = Prompt.all
+	@prompt = Prompt.order("RANDOM()").first
 	end
 end

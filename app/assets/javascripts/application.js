@@ -14,3 +14,33 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var timeInMinutes = 10;
+var currentTime = Date.parse(new Date());
+var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
+	// var tenMinsLater = new Date();
+	// tenMinsLater.setMinutes(tenMinsLater.getMinutes() + 10);
+	function getTimeRemaining(endtime) {
+		var t = Date.parse(endtime) - Date.parse(new Date());
+		var seconds = Math.floor( (t/1000) % 60);
+		var minutes = Math.floor( (t/1000/60) % 60);
+		var hours = Math.floor( (t/(1000*60*60)) % 24);
+		return {
+			'total': t,
+			'hours': hours,
+			'minutes': minutes,
+			'seconds': seconds
+		};
+	}
+
+	function initializeClock(id, endtime) {
+		var clock = document.getElementById(id);
+		var timeinterval = setInterval(function() {
+			var t = getTimeRemaining(endtime);
+			clock.innerHTML = 
+												'minutes: ' + t.minutes +
+												' seconds: ' + t.seconds;
+			if (t.total<=0){
+				clearInterval(timeinterval);
+			}
+		},1000);
+	}
