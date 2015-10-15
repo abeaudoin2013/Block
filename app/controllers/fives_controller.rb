@@ -9,7 +9,11 @@ class FivesController < ApplicationController
 	
 	def create
 		@document = Document.create(document_params)
-		redirect_to five_path
+		if @document.five
+			redirect_to @user, notice: "Good job!"
+		else 
+			redirect_to edit_document_path(@document.id), notice: "You need to fit in the missing words!"
+		end
 	end
 	
 	private 
