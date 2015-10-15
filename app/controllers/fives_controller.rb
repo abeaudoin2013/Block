@@ -1,6 +1,12 @@
 class FivesController < ApplicationController
-	def index 
+before_action :authorize_user
+
+	def index
+		@user = current_user 
 		@document = Document.new
+		@fives = Five.all.sample(5)
+		words = @fives.map {|f| f.word}
+		@collected_words = words.join ","
 	end
 	
 	def show 
@@ -8,11 +14,14 @@ class FivesController < ApplicationController
 	end
 	
 	def create
-		@document = Document.create(document_params)
-		if @document.five
-			redirect_to @user, notice: "Good job!"
+		@document = Document.new(body: params[:document][:body], user: current_user)
+		words = params[:document][:words].split(",")
+		puts words.inspect
+		if @document.verify_five(words)
+			@document.save
+			redirect_to current_user, notice: "Good job!"
 		else 
-			redirect_to edit_document_path(@document.id), notice: "You need to fit in the missing words!"
+			redirect_to :back, notice: "You need to fit in the missing words!"
 		end
 	end
 	
