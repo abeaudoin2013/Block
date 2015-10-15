@@ -73,6 +73,17 @@ function count(document_body) {
 	document.getElementById("c").value = r;
 }
 //
+//Random Link!
+var randomlinks=new Array()
+
+randomlinks[0]="http://localhost:3000/prompts"
+randomlinks[1]="http://localhost:3000/five"
+randomlinks[2]="http://localhost:3000/imitation"
+
+function randomlink(){
+window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
+}
+//
 
 
 
