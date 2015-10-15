@@ -14,11 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-var timeInMinutes = 10;
-var currentTime = Date.parse(new Date());
-var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
-	// var tenMinsLater = new Date();
-	// tenMinsLater.setMinutes(tenMinsLater.getMinutes() + 10);
+
 	function getTimeRemaining(endtime) {
 		var t = Date.parse(endtime) - Date.parse(new Date());
 		var seconds = Math.floor( (t/1000) % 60);
@@ -44,3 +40,11 @@ var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
 			}
 		},1000);
 	}
+
+	function setTenMins(id) {
+		var timeInMinutes = 10;
+		var currentTime = Date.parse(new Date());
+		var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
+		initializeClock(id, tenMinsLater);
+	}
+
