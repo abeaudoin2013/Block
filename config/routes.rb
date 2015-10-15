@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
   resources :users
-  resources :documents
+
+  get '/documents', to: 'documents#index'
+  post '/five', to: 'fives#create'
+ 
+  
 
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
