@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   get '/prompts', to: 'prompts#index'
   post '/prompts', to: 'prompts#create'
 
-  root 'users#new'
+  root 'users#show'
 end

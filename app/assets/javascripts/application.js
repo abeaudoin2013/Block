@@ -68,5 +68,40 @@
 				}
 			});
 		});
-		// }
-////
+
+$(document).on('page:change ready', function(){
+	$( ".clickme" ).click(function() {
+	$( ".docbody" ).show( "slow" );
+	})
+	});
+
+
+function validateText() {
+	regex = /\s+/gi;
+	minLen = 250;
+	if (new_document.prompts_doc.value.trim().replace(regex, ' ').split(' ').length < minLen) {
+		alert("Must be greater than 250");
+	}
+	else {
+		alert("OK");
+	}
+}
+
+function count(document_body) {
+	var y = prompts_doc.value;
+	var r = 0;
+	a = y.replace(/\s/g,' ');
+	a = a.split(' ');
+	for (z = 0; z < a.length; z++) {
+		if(a[z].length > 0)
+			r++;
+	}
+	document.getElementById("c").value = r;
+}
+//
+
+
+
+
+
+

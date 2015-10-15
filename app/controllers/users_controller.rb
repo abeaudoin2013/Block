@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+before_action :new_user_only, only: [:new]
 	
 	def index 
 		@user = User.all
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@documents = Document.all		
 	end
 
 private
@@ -27,6 +29,5 @@ private
 	def user_params
 		params.require(:user).permit(:username, :email, :password)
 	end
-
-
+	
 end

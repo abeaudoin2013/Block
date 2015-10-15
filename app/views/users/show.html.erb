@@ -1,1 +1,4 @@
 <h1>Hi, <%= @user.username %></h1>
+
+<h3><%= @user.username %>'s writing examples</h3>
+<%= render @user.documents %>
