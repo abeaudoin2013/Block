@@ -19,7 +19,7 @@ before_action :authorize_user
 		puts words.inspect
 		if @document.verify_five(words)
 			@document.save
-			redirect_to current_user, notice: "Good job!"
+			redirect_to current_user, notice: "Good job " + current_user.username + "!"
 		else 
 			redirect_to :back, notice: "You need to fit in the missing words!"
 		end

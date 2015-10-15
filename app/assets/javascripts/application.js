@@ -47,4 +47,9 @@
 		var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
 		initializeClock(id, tenMinsLater);
 	}
-////
+$(document).on('page:change ready', function(){
+	$( ".clickme" ).click(function() {
+	$( ".docbody" ).show( "slow" );
+	})
+	});
+	////
