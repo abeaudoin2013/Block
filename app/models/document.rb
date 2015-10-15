@@ -18,6 +18,10 @@ class Document < ActiveRecord::Base
 # 	    end
 # 	end
 	
+
+
+
+
 	def verify_five(words)
 		score = 0
 		# loops through words
