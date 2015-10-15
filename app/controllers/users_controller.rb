@@ -20,7 +20,8 @@ before_action :new_user_only, only: [:new]
 	end
 
 	def show
-		@user = User.find(params[:id])		
+		@user = User.find(params[:id])
+		@documents = Document.all		
 	end
 
 private
