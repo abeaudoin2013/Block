@@ -1,13 +1,15 @@
 <%= @prompt.setup %>
-<%= form_for @document, url: prompts_path do |f| %>
+<%= form_for @document, url: prompts_path, :html => { :onsubmit => "return validateText();" } do |f| %>
 	<p>
-		<%= f.label :body %>
-		<%= f.text_area :body %>
+		<%= f.text_area :body, id: :prompts_doc, onkeyup: ("count(this)") %>
 	</p>
 	<p>
-		<%= f.submit %>
+		<%= f.submit "Save" %>
 	</p>
+	<p>Word Count:<input type="text" id="c" onkeyup="count(document.new_document.prompts_doc,this)"></p>
 <% end %>
+
 <div id="clockdiv" onclick="setTenMins('clockdiv')">Start</div>
+
 
 
