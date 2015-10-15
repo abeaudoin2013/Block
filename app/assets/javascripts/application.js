@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+///TIMER
 	function getTimeRemaining(endtime) {
 		var t = Date.parse(endtime) - Date.parse(new Date());
 		var seconds = Math.floor( (t/1000) % 60);
@@ -47,4 +47,4 @@
 		var tenMinsLater = new Date(currentTime + timeInMinutes*60*1000);
 		initializeClock(id, tenMinsLater);
 	}
-
+////
