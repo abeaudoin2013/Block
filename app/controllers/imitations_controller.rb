@@ -9,4 +9,15 @@ class ImitationsController < ApplicationController
 		sanitized_input = Imitation.input_reader(blah)
 		@checker = Imitation.checker(sanitized_piece, sanitized_input)
 	end
+
+	def create
+		@document = Document.create(document_params)
+		redirect_to user_path(User.last.id)
+	end
+
+	private 
+
+	def document_params
+		params.require(:document).permit(:body).merge(user: current_user)
+	end
 end
