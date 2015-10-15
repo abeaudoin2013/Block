@@ -4,6 +4,10 @@ class DocumentsController < ApplicationController
 		@documents = Document.all
 	end
 
+	def create
+		
+	end
+	
 private 
 
 def document_params
