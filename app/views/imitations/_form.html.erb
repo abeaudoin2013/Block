@@ -1,9 +1,11 @@
-<%= form_for @document, url: imitation_doc_path do |f| %>
+<div>
+	<%= form_for @document, url: imitation_doc_path do |f| %>
 	<p>
 		<%= f.label :body %>
-		<%= f.text_area :body %>
+		<%= f.text_area :body, id: :imitation_typer %>
 	</p>
 	<p>
 		<%= f.submit %>
 	</p>
-<% end %>
+	<% end %>
+</div>

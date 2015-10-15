@@ -14,4 +14,7 @@ class Document < ActiveRecord::Base
 	    return false
     end
  end
+
+
+
 end
