@@ -6,7 +6,7 @@
 		<div class="col-lg-12">
 			<%= form_for @document, url: prompts_path, :html => { :onsubmit => "return validateText();" } do |f| %>
 				<p>
-					<%= f.text_area :body, id: :prompts_doc, onkeyup: ("count(this)") %>
+					<%= f.text_area :body, id: :prompts_doc, onkeyup: ("count(this)"), onclick: ("setTenMins('clockdiv')") %>
 				</p>
 				<p>
 					<%= f.submit "Save" %>

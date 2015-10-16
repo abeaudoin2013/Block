@@ -13,6 +13,10 @@
  @import
  */
 
+ /*
+ *= require ionicons
+ */
+
  @import 'bootstrap';
 body {
 	background-image: url(background.jpg);
@@ -20,6 +24,33 @@ body {
 
 
 }
+
+nav {
+	float: right;
+	height: 100px;
+	span {
+		font-size: 30px;
+		color: #ffa449;
+		display: inline-block;
+	}
+	ul {
+		list-style: none;
+		display: inline-block;
+	}
+	li {
+		display: inline-block;
+		padding: 10px;
+		font-size: 20px;
+	}
+	li a {
+		text-decoration: none;
+	}
+}
+
+#exercise-icon {
+	margin: 0 auto;
+}
+
 .docbody {
 	display: none;
 }
@@ -112,8 +143,8 @@ body {
 #sign-up-container {
 	// margin-left: 0;
 }
-#log-in-form,
-#sign-up-form {
+#login-form,
+#signup-form {
 	display: none;
 	/*background-image: url('20.jpg');
 	background-repeat: no-repeat;
@@ -127,8 +158,8 @@ body {
 	/*border: 1px solid #45453e;*/
 	text-align: center;
 }
-#sign-up-btn,
-#log-in-btn {
+#signup-btn,
+#login-btn {
 	color: #f0f0d8;
 	border: 1px solid #f0f0d8;
 	border-radius: 5%;
@@ -153,6 +184,10 @@ body {
 }
 .push_me {
 	margin-top: 20%;
+}
+
+#clockdiv {
+	font-size: 50px;
 }
 
 
