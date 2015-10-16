@@ -54,21 +54,29 @@
 		opening();
 		
 		var docBuilder = [];
-		var piece = $('#piece').val();
-		console.log($('#imitation_typer').val());
-		console.log(piece);
 
+		$('.submitter').hide();
+		
+		// $('#imitation_typer').one("keyup", function(event){
+		// 	setTenMins('#clockdiv');
+		// });
 		$('#imitation_typer').on("keyup", function(event){
 			var charNum = event.which;
 			var toLetter = String.fromCharCode(charNum);
 			docBuilder.push(toLetter.toLowerCase());
 			var totalLettersTyped = $('#imitation_typer').val().length
 				if ($('#piece').text().slice(0, totalLettersTyped) === $('#imitation_typer').val()) {
-					$('.matchingStatus').text("matching");
+					var x = $('.matchingStatus').css('background-color', 'rgba(79, 176, 184, .6)');
+					x.text("matching");
+					if($('#piece').text() === $('#imitation_typer').val()){
+						$('.matchingStatus').text("matched!");
+						$('.submitter').show(500);
+					} 
 				} else {
-					$('.matchingStatus').text("not matching");
+					var p = $('.matchingStatus').css('background-color', 'rgba(199, 5, 0, .6)');
+					p.text("not matching");
 				}
-			});
+			});	
 		});
 
 function opening() {
@@ -114,6 +122,19 @@ function randomlink(){
 window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 }
 //
+
+//LOGIN/SIGNUP
+$(document).on('page:change ready', function(){
+	$('#log-in-btn').click(function() {
+		$('#log-in-form').toggle('slow');
+	});
+});
+
+$(document).on('page:change ready',function(){
+	$('#sign-up-btn').click(function (){
+		$('#sign-up-form').toggle('slow');
+	});
+});
 
 
 

@@ -1,17 +1,26 @@
-<h1>Five Word Exercise</h1>
-<h3>Write a 200 word essay including the 5 random words listed below: </h3>
+<div class="container">
 
-<% unless params[:words] == nil then %>
-	<%	words = params[:words].split(",") %>
-	<% words.each do |m| %>
-	<li><%= m %></li>
-	<% end %>
-	<% else %>
-	<% @fives.each do |five| %>
-		<ul>
-			<li><%= five.word %></li>
-		</ul>
-	<% end %>
-<% end %>
-<%= render "form" %>
-<div id="clockdiv" onclick="setTenMins('clockdiv')">Start</div>
+		<div class="col-lg-12"><h1 class='exercise_explination'>Write a 200 word essay including the 5 random words listed below: </h1>
+		</div>
+		
+		
+
+			<div class="col-lg-12">
+			<% unless params[:words] == nil then %>
+			<%	words = params[:words].split(",") %>
+			<% words.each do |m| %>
+				<h3><%= m %></h3>
+			<% end %>
+			<% else %>
+				<% @fives.each do |five| %>
+					<h3 class='one_of_five'><%= five.word %></h3>
+				<% end %>
+			<% end %>
+			</div>
+		<div class="col-lg-12">
+			<%= render "form" %>
+		</div>
+		<div class="col-lg-12">
+			<div id="clockdiv" onclick="setTenMins('clockdiv')">Start</div>
+		</div>
+</div>

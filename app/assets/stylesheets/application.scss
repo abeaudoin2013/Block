@@ -1,0 +1,160 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ @import
+ */
+
+ @import 'bootstrap';
+body {
+	background-image: url(background.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+
+}
+.docbody {
+	display: none;
+}
+
+.docbody_open {
+	display: block;
+}
+.exercise_explination{
+	background-color: rgba(240, 240, 216, .9);
+	display: inline-block;
+}
+#piece {
+	 background-color: rgba(240, 240, 216, .9);
+	 display: inline-block;
+}
+#imitation_typer{
+	width: 100%;
+	border: none;
+	font-size: 200%;
+	border-radius: 15px;
+	overflow: visible;
+	max-height: 100%;
+	height: 70vh;
+	padding: 15px;
+	background-color: rgba(255, 217, 152, .8);
+}
+#imitation_typer:focus{
+	outline-width: 0;
+	outline: none;
+}
+.matchingStatus {
+	text-weight: 400%;
+	background-color: #4fb0b8;
+	display: inline-block;
+}
+#prompts_doc {
+	width: 100%;
+	border: none;
+	font-size: 200%;
+	border-radius: 15px;
+	height: 70vh;
+	padding: 15px;
+	background-color: rgba(255, 217, 152, .8);
+}
+#wordCounter {
+	text-weight: 400%;
+	background-color: #4fb0b8;
+	display: inline-block;
+	max-width: 10%;
+}
+#c {
+	margin-left: 5px;
+	background-color: #4fb0b8;
+	outline-width: 0;
+	outline: none;
+	border: none;
+	display: inline-block;
+	width: 25%;
+}
+#five_word {
+	width: 100%;
+	border: none;
+	font-size: 200%;
+	border-radius: 15px;
+	height: 70vh;
+	padding: 15px;
+	background-color: rgba(255, 217, 152, .8);
+}
+.one_of_five {
+	display: inline-block;
+	margin-right: 15px;
+	background-color: rgba(240, 240, 216, .9);
+}
+
+// log in css
+
+.ion-edit {
+ 	color: #f0f0d8;
+ 	font-size: 50px;
+ }
+#log-in-container,
+#sign-up-container {
+/*	background-color: #ffa449;*/
+	margin-top: 250px;
+	margin-left: 200px;
+	width: 300px;
+	display: block;
+	float: left;
+}
+#sign-up-container {
+	margin-left: 0;
+}
+#log-in-form,
+#sign-up-form {
+	display: none;
+	/*background-image: url('20.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background-color: #f0f0d8;
+	width: 200px;
+	padding: 15px;
+	color: #45453e;
+	/*border: 1px solid #45453e;*/
+	text-align: center;
+}
+#sign-up-btn,
+#log-in-btn {
+	color: #f0f0d8;
+	border: 1px solid #f0f0d8;
+	border-radius: 5%;
+	text-align: center;
+	width: 175px;
+	margin-left: 30px;
+}
+#email,
+#password_digest,
+#user_username,
+#user_email, 
+#user_password {
+	width: 150px;
+	height: 20px;
+	background-color: #f0f0d8; 
+}
+#loginbtn {
+	width: 60px;
+	height: 200px;
+}
+.about-us {
+	width: 100%;
+	clear: both;
+}
+
+
+
+
+
+
+
