@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
   resources :users
-
-  get '/documents', to: 'documents#index'
+  resources :documents
+#   get '/documents', to: 'documents#index'
+#   get '/documents', to: 'documents#edit'
   post '/five', to: 'fives#create'
  
   post '/imiation', to: 'imitations#create', as: :imitation_doc

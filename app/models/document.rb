@@ -1,7 +1,9 @@
 class Document < ActiveRecord::Base
 	belongs_to :user
-	validates_length_of :body, minimum: 250, too_short: 'Your essay must be at least 200 words.',
-                      tokenizer: ->(body) { body.scan(/[a-zA-Z]+/) }
+# 	validates_length_of :body, minimum: 250, too_short: 'Your essay must be at least 200 words.',
+#                       tokenizer: ->(body) { body.scan(/[a-zA-Z]+/) }
+ 
+ 
   # str.split(/[a-zA-Z]+/).size                    
 	# validates :body, length: { minimum: 200 } #this means minimum 200 char, not words
 # 	def five

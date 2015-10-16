@@ -13,21 +13,28 @@ before_action :authorize_user
 		
 	end
 	
+	def edit
+		
+	end
+	
 	def create
 		@document = Document.new(body: params[:document][:body], user: current_user)
 		words = params[:document][:words].split(",")
+		@words = params[:document][:words]
 		puts words.inspect
 		if @document.verify_five(words)
 			@document.save
 			redirect_to current_user, notice: "Good job " + current_user.username + "!"
 		else 
-			redirect_to :back, notice: "You need to fit in the missing words!"
+			redirect_to five_path(:body => params[:document][:body], :words => params[:document][:words]), notice: "You need to fit in the missing words!"
 		end
 	end
+	
 	
 	private 
 
 	def document_params
 		params.require(:document).permit(:body).merge(user: current_user)
 	end
+			
 end

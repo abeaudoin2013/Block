@@ -2,7 +2,7 @@
 	<%= f.hidden_field :words, value: @collected_words %>
 	<p>
 		<%= f.label :body %>
-		<%= f.text_area :body %>
+		<%= f.text_area :body, :value => params[:body] %>
 	</p>
 	<p>
 		<%= f.submit %>
