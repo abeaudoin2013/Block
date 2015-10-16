@@ -22,11 +22,12 @@ before_action :authorize_user
 		words = params[:document][:words].split(",")
 		@words = params[:document][:words]
 		puts words.inspect
-		if @document.verify_five(words)
+		if @document.verify_five(words) == true
 			@document.save
 			redirect_to current_user, notice: "Good job " + current_user.username + "!"
-		else 
-			redirect_to five_path(:body => params[:document][:body], :words => params[:document][:words]), notice: "You need to fit in the missing words!"
+		else
+			saved_words = @document.verify_five(words) 
+			redirect_to five_path(:body => params[:document][:body], words: params[:document][:words], found_words: saved_words[:found], missing_words: saved_words[:missing]), notice: "You need to fit in the missing words: #{saved_words[:missing].join(", ")}."
 		end
 	end
 	

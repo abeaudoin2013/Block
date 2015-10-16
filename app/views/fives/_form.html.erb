@@ -1,5 +1,5 @@
 <%= form_for @document, url: five_path do |f| %>
-	<%= f.hidden_field :words, value: @collected_words %>
+	<%= f.hidden_field :words, value: params[:words] || @collected_words %>
 	<p>
 		<%= f.label :body %>
 		<%= f.text_area :body, :value => params[:body] %>

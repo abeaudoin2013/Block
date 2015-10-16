@@ -26,15 +26,21 @@ class Document < ActiveRecord::Base
 
 	def verify_five(words)
 		score = 0
+		words_result = {found: [], missing: []}
 		# loops through words
 		for word in words
-			score += 1 if body.downcase.gsub(/[.,-\/]/, '').include?(word)	
+			if body.downcase.gsub(/[.,-\/]/, '').include?(word)
+				score += 1
+				words_result[:found].push word 
+			else
+				words_result[:missing].push word 
+			end
 		end
 		
 		if score >= 5
 			true
 		else
-			false
+			words_result
 		end
 	end
 end
