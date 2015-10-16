@@ -2,13 +2,21 @@
 
 		<div class="col-lg-12"><h1 class='exercise_explination'>Write a 200 word essay including the 5 random words listed below: </h1>
 		</div>
+		
+		
 
 			<div class="col-lg-12">
+			<% unless params[:words] == nil then %>
+			<%	words = params[:words].split(",") %>
+			<% words.each do |m| %>
+				<h3><%= m %></h3>
+			<% end %>
+			<% else %>
 				<% @fives.each do |five| %>
 					<h3 class='one_of_five'><%= five.word %></h3>
 				<% end %>
+			<% end %>
 			</div>
-		
 		<div class="col-lg-12">
 			<%= render "form" %>
 		</div>

@@ -50,7 +50,11 @@
 
 	// function findLetter() {
 		$(document).ready(function(){
+			
+		opening();
+		
 		var docBuilder = [];
+
 		$('.submitter').hide();
 		
 		// $('#imitation_typer').one("keyup", function(event){
@@ -75,11 +79,13 @@
 			});	
 		});
 
-$(document).on('page:change ready', function(){
-	$( ".clickme" ).click(function() {
-	$( ".docbody" ).show( "slow" );
-	})
+function opening() {
+	$("[data-click]").click(function(e) {
+		$(e.currentTarget).next().toggle();
 	});
+}
+
+// append by clicking .addClass
 
 
 function validateText() {

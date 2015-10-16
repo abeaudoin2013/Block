@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 before_action :new_user_only, only: [:new]
 	
 	def index 
-		@user = User.all
+		@user = current_user
 	end
 
 	def new

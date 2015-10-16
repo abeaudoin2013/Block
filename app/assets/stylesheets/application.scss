@@ -23,6 +23,10 @@ body {
 .docbody {
 	display: none;
 }
+
+.docbody_open {
+	display: block;
+}
 .exercise_explination{
 	background-color: rgba(240, 240, 216, .9);
 	display: inline-block;

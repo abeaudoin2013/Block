@@ -8,6 +8,12 @@ class DocumentsController < ApplicationController
 		
 	end
 	
+	def edit
+		
+	end
+	
+
+	
 private 
 
 def document_params
