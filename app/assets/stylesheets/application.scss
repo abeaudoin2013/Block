@@ -17,7 +17,7 @@
 body {
 	background-image: url(background.jpg);
 	background-repeat:no-repeat;
-	background-size: cover;
+
 
 }
 .docbody {
@@ -103,14 +103,14 @@ body {
 #log-in-container,
 #sign-up-container {
 /*	background-color: #ffa449;*/
-	margin-top: 250px;
-	margin-left: 200px;
+	// margin-top: 250px;
+	// margin-left: 200px;
 	width: 300px;
-	display: block;
-	float: left;
+	// display: block;
+	// float: left;
 }
 #sign-up-container {
-	margin-left: 0;
+	// margin-left: 0;
 }
 #log-in-form,
 #sign-up-form {
@@ -119,8 +119,10 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;*/
 	background-color: #f0f0d8;
-	width: 200px;
+	width: 175px;
+	margin: 0 auto;	
 	padding: 15px;
+	margin-top: 5%;
 	color: #45453e;
 	/*border: 1px solid #45453e;*/
 	text-align: center;
@@ -131,8 +133,9 @@ body {
 	border: 1px solid #f0f0d8;
 	border-radius: 5%;
 	text-align: center;
-	width: 175px;
-	margin-left: 30px;
+	 width: 175px;
+	 margin: 0 auto;
+	// margin-left: 30px;
 }
 #email,
 #password_digest,
@@ -143,13 +146,13 @@ body {
 	height: 20px;
 	background-color: #f0f0d8; 
 }
-#loginbtn {
-	width: 60px;
-	height: 200px;
-}
+
 .about-us {
 	width: 100%;
 	clear: both;
+}
+.push_me {
+	margin-top: 20%;
 }
 
 
