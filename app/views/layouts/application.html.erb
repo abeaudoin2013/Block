@@ -11,12 +11,15 @@
 		<nav>
 			<% if current_user %>
 				<span>Hey there, <%= link_to current_user.username, @user %></span>
-					<%=link_to "log out", sessions_path, method: :delete %>
-					<%=link_to "Profile", user_path(@user) %>
-					<form method="post">
-					<p type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i></p> </form>
-					<!-- <input type="button" name="B1" value="Exercise >>" onclick="randomlink()"> -->
-					<%= link_to "Prompt", prompts_path %>
+					<ul>
+						<li><%=link_to "Profile", user_path(@user) %></li>
+						<li><%=link_to "Log Out", sessions_path, method: :delete %></li>
+					</ul>
+					<div id="exercise-icon">
+						<form method="post">
+							<p type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i></p> 
+						</form>
+					</div>
 				<% else %>
 				<% end %>
 				</script>
