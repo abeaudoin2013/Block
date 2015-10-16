@@ -50,12 +50,7 @@
 
 	// function findLetter() {
 		$(document).ready(function(){
-			$('#sign-up-btn').click(function (){
-				$('#sign-up-form').toggle('slow');
-			});
-			$('#log-in-btn').click(function() {
-				$('#log-in-form').toggle('slow');
-			});
+			
 		opening();
 		
 		var docBuilder = [];
@@ -129,7 +124,16 @@ window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 //
 
 //LOGIN/SIGNUP
-
+$(document).ready(function(){
+$('#sign-up-btn').click(function (){
+	$('#sign-up-form').toggle('slow');
+});
+});
+$(document).ready(function(){
+$('#login-btn').click(function() {
+	$('#login-form').toggle('slow');
+});
+});
 
 
 
