@@ -12,27 +12,24 @@
 			<% if current_user %>
 				<span>Hey there, <%= link_to current_user.username, @user %></span>
 					<%=link_to "log out", sessions_path, method: :delete %>
-					<%=link_to "Profile", @user %>
-
+					<%=link_to "Profile", user_path(@user) %>
+					<form method="post">
+					<p type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i></p> </form>
+					<!-- <input type="button" name="B1" value="Exercise >>" onclick="randomlink()"> -->
 					<%= link_to "Prompt", prompts_path %>
 				<% else %>
-					<%= link_to "Sign Up", new_user_path %>
-					<%= link_to "Log in", login_path %>
 				<% end %>
 				</script>
-				<form method="post">
-				<p><input type="button" name="B1" value="Exercise >>" onclick="randomlink()"></p> </form>
 		</nav>
 	
 	</header>
 	<main> 
-		<% if flash[:notice] %>
-			<div class="notice"><%=flash[:notice]%></div> 
-		<% end %>
-
-	</main>
-
-<%= yield %>
-
+		<div class="container">
+			<% if flash[:notice] %>
+				<div class="notice"><%=flash[:notice]%></div> 
+			<% end %>
+			<%= yield %>
+			</div>
+		</main>
 </body>
 </html>
