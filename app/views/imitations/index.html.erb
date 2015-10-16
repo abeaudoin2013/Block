@@ -1,12 +1,23 @@
-<h1>Here is an excerpt from <%= %> by <%= %></h1>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="exercise_explination">Here is an excerpt from <%= %> by <%= %>. Copy it word for word.</h1>
+		</div>
+		<div class="col-lg-12">
+			<h3 id="piece"><%=@piece%></h3>
 
-<h3 id="piece"><%=@piece%></h3>
+		</div>
+	
 
-<h2>Imitate it</h2>
-<br>
-<p><%=@checker%></p>
-<%= render "form" %>
+			<br>
+			<!-- <p><%=@checker%></p> -->
+		<div class="col-lg-12">
+			<%= render "form" %>
+		</div>
+		<div class="col-lg-12">
+			<p class='matchingStatus'></p>
+		</div>
+	</div>
+</div>
+<!-- <div id="clockdiv" onkeyup="setTenMins('#clockdiv')">Start</div> -->
 
-<div id="clockdiv" onclick="setTenMins('clockdiv')">Start</div>
-
-<p class='matchingStatus'></p>
