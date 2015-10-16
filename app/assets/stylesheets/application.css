@@ -17,3 +17,7 @@
 .docbody {
 	display: none;
 }
+
+.docbody_open {
+	display: block;
+}

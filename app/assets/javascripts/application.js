@@ -50,11 +50,13 @@
 
 	// function findLetter() {
 		$(document).ready(function(){
+			
+		opening();
+		
 		var docBuilder = [];
 		var piece = $('#piece').val();
 		console.log($('#imitation_typer').val());
 		console.log(piece);
-		var lowcasePiece = piece.toLowerCase();
 
 		$('#imitation_typer').on("keyup", function(event){
 			var charNum = event.which;
@@ -69,11 +71,13 @@
 			});
 		});
 
-$(document).on('page:change ready', function(){
-	$( ".clickme" ).click(function() {
-	$( ".docbody" ).show( "slow" );
-	})
+function opening() {
+	$("[data-click]").click(function(e) {
+		$(e.currentTarget).next().toggle();
 	});
+}
+
+// append by clicking .addClass
 
 
 function validateText() {
