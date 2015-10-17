@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
 ///TIMER
@@ -125,8 +126,8 @@ window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
 
 //LOGIN/SIGNUP
 $(document).ready(function(){
-$('#sign-up-btn').click(function (){
-	$('#sign-up-form').toggle('slow');
+$('#signup-btn').click(function (){
+	$('#signup-form').toggle('slow');
 });
 });
 $(document).ready(function(){

@@ -10,23 +10,25 @@
 	<header>
 		<nav>
 			<% if current_user %>
-				<span>Hey there, <%= link_to current_user.username, @user %></span>
+<!-- 				<span>Hey there, <%= link_to current_user.username, @user %></span> -->
 					<ul>
 						<li><%=link_to "Profile", user_path(@user) %></li>
 						<li><%=link_to "Log Out", sessions_path, method: :delete %></li>
 					</ul>
-					<div id="exercise-icon">
-						<form method="post">
-							<p type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i></p> 
-						</form>
-					</div>
-				<% else %>
-				<% end %>
-				</script>
+			<% end %>	
 		</nav>
-	
 	</header>
 	<main> 
+		<% if current_user %>
+			<div class="row">
+				<div id="exercise-icon" class='col-md-4'>
+					<!-- <form method="post"> -->
+						<p type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i>Click to begin an exercise!</p> 
+					<!-- </form> -->
+
+				</div>
+			</div>
+		<% end %>
 		<div class="container">
 			<% if flash[:notice] %>
 				<div class="notice"><%=flash[:notice]%></div> 
@@ -34,5 +36,5 @@
 			<%= yield %>
 			</div>
 		</main>
-</body>
+	</body>
 </html>
