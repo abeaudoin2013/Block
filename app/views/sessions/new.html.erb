@@ -5,7 +5,6 @@
 </div>
 <div class="push_me">
 <div class="container">
-<!-- <div id="log-in-container"> -->
 	<div class="row">
 		<div class="col-sm-6 login-box">
 					<h1 id="login-btn">Log In</h1>
@@ -34,12 +33,21 @@
 </div>
 </div>
 <div id="about-us">
-	<div id="about">
-		<h2>Break your writer’s block.</h2>
-		<h2>Think creatively.</h2>
-		<h2>Write more.</h2>
+	<div class="container">
+		<div id="about">
+			<h2>Break your writer’s block.</h2>
+			<h2>Think creatively.</h2>
+			<h2>Write more.</h2>
+		</div>
 	</div>
 </div>	
 <div class="writers-example">
-	<h1>SOME EXAMPLES</h1>
+	<div class="container">
+			<h1>SOME EXAMPLES</h1>
+			<% @documents.each do |document| %>
+				<div class="writers-example-doc">
+				<%= document.body %><br>	
+				</div>		
+			<% end %>
+	</div>
 </div>
