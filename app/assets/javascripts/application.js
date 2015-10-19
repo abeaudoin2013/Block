@@ -101,7 +101,7 @@ function validateText() {
 	}
 }
 
-function count(document_body) {
+function count1(document_body) {
 	var y = prompts_doc.value;
 	var r = 0;
 	a = y.replace(/\s/g,' ');

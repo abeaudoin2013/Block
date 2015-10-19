@@ -87,14 +87,14 @@ nav {
 #logo {
 	font-family: 'Kaushan Script', cursive;
 	font-size: 100px;
+	text-align: center;
 	color: #f0f0d8;
 	padding-top: 200px;
-	padding-left: 400px;
 	padding-bottom: 0;
 }
 
 #logocontainer {
-	height: 20vh;
+	height: 10vh;
 }
 
 #exercise-icon {
@@ -221,9 +221,7 @@ nav {
 	// display: block;
 	// float: left;
 }
-#sign-up-container {
-	// margin-left: 0;
-}
+
 
 #login-form,
 #signup-form {
@@ -232,7 +230,7 @@ nav {
 	width: 175px;
 	margin: 0 auto;	
 	padding: 15px;
-	margin-top: 5%;
+	margin-top: 75px;
 	color: #45453e;
 	text-align: center;
 	height: 250px;
@@ -258,7 +256,14 @@ nav {
 	text-align: center;
 	height: 50px;
 	width: 175px;
-	margin: 0 auto;
+	// margin: 0 auto;
+}
+
+#signup-btn {
+	float: left;
+}
+#login-btn {
+	float: right;
 }
 
 input#loginbtn {
@@ -272,10 +277,12 @@ input#signupbtn {
 
 .login-box {
 	padding-left: 365px;
+	float: left;
 }
 
 .sign-up-box {
 	padding-right: 365px;
+	float: right;
 }
 
 #email,
@@ -388,6 +395,10 @@ a:hover {
 }
 #tag {
 	margin: 30px auto 0 auto;
+}
+
+.modal-content {
+	background-color: #f0f0d8;
 }
 
 

@@ -7,12 +7,12 @@
 		<div class="col-lg-12">
 			<%= form_for @document, url: prompts_path, :html => { :onsubmit => "return validateText();" } do |f| %>
 				<p>
-					<%= f.text_area :body, id: :prompts_doc, onkeyup: ("count(this)"), onclick: ("setTenMins('clockdiv')") %>
+					<%= f.text_area :body, id: :prompts_doc, onkeyup: ("count1(this)"), onclick: ("setTenMins('clockdiv')") %>
 				</p>
 				<p>
 					<%= f.submit "Save", id: :submit %>
 				</p>
-				<p id='wordCounter'>Word Count:<input type="text" id="c" onkeyup="count(document.new_document.prompts_doc,this)"></p>
+				<p id='wordCounter'>Word Count:<input type="text" id="c" onkeyup="count1(document.new_document.prompts_doc,this)"></p>
 			<% end %>
 		</div>
 		<div class="col-lg-12">
