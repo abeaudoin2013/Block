@@ -20,6 +20,6 @@ Five.create(word: 'estate')
 Five.create(word: 'beard')
 Five.create(word: 'fountain')
 Five.create(word: 'painting')
-Five.create(word: 'theif')
+Five.create(word: 'thief')
 
 
