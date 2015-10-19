@@ -110,7 +110,7 @@ nav {
 	display: block;
 }
 .exercise_explination{
-	background-color: rgba(240, 240, 216, .6);
+	background-color: rgba(240, 240, 216, .9);
 	display: inline-block;
 	padding: 1em;
 	font-size: 100%;
@@ -118,6 +118,7 @@ nav {
 #piece {
 	 background-color: rgba(240, 240, 216, .9);
 	 display: inline-block;
+	 padding: 1em;
 }
 #imitation_typer{
 	width: 100%;
@@ -192,6 +193,7 @@ nav {
 #sign-up-container {
 	// margin-left: 0;
 }
+
 #login-form,
 #signup-form {
 	display: none;
@@ -236,10 +238,14 @@ nav {
 	background-color: #f0f0d8; 
 }
 
+.profile-container {
+	height: 100%;
+}
+
 #about-us {
 	width: 100vw;
 	margin-top: 300px;
-	background-color: #fff;	
+	background-color: #f2f2e8;	
 	height: 75vh;
 	// position: static;
 	left: 0;
@@ -253,10 +259,20 @@ nav {
 
 .writers-example {
 	width: 100vw;
-	background-color: #fff;	
-	height: 75vh;
+	background-color: #f4f4ec;	
+	// height: 100%;
 	// position: static;
 	left: 0;
+	h1 {
+		text-align: center;
+	}
+}
+
+.writers-example-doc {
+	line-height: 30px;
+	height: 100%;
+	text-decoration: underline;
+	margin-bottom: 1em;
 }
 
 .push_me {
@@ -294,7 +310,7 @@ nav {
 	background-color: #262626;
 	height: 30vh;
 	width: 100%;	
-	// position: absolute;
+	// position: relative;
   // margin-top: -150px; /* negative value of footer height */
   clear:both;
   bottom: 0;
