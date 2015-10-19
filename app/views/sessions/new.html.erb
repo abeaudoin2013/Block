@@ -38,15 +38,16 @@
 			<h2>Break your writer’s block.</h2>
 			<h2>Think creatively.</h2>
 			<h2>Write more.</h2>
+			<h4 id='tag'><i>Block is a series of creative writing exercises for wordsmiths of all levels.</i></h4>
 		</div>
 	</div>
 </div>	
 <div class="writers-example">
 	<div class="container">
-			<h1>SOME EXAMPLES</h1>
+			<h1>Some of our writers</h1>
 			<% @documents.each do |document| %>
 				<div class="writers-example-doc">
-				<%= document.body %><br>	
+				<%= document.body %> by <%=link_to document.user.username, user_path(document.user.id) %><br>	
 				</div>		
 			<% end %>
 	</div>
