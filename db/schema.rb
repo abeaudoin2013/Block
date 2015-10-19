@@ -11,19 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014190524) do
+ActiveRecord::Schema.define(version: 20151019133304) do
 
   create_table "documents", force: :cascade do |t|
     t.text     "body"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "exercises", force: :cascade do |t|
-    t.string   "fivewords"
-    t.text     "prompts"
-    t.text     "imitation"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +30,8 @@ ActiveRecord::Schema.define(version: 20151014190524) do
     t.text     "piece"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "title"
+    t.string   "author"
   end
 
   create_table "prompts", force: :cascade do |t|
