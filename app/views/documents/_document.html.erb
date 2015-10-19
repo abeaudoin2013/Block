@@ -1,11 +1,8 @@
-<!-- <div class="document">
-	<h1 data-click="clickme"><i class="ion-document-text"></i></h1>
-	<p class="docbody"><%= document.body %></p>
-</div> -->
+
 <!-- Trigger the modal with a button -->
-<button type="button" class="btn btn-info btn lg" data-toggle="modal" data-target="#myModal" id="exc-btn"><i class="ion-document-text" data-toggle="modal"></i></button>
+<button type="button" class="btn btn-info btn lg" data-toggle="modal" data-target="#document-<%= document.id %>" id="exc-btn"><i class="ion-document-text" data-toggle="modal"></i></button>
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+<div id="document-<%= document.id %>" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content/\ -->
 		<div class="modal-content">
@@ -22,4 +19,7 @@
 		</div>
 	</div>
 </div>
+
+
+
 

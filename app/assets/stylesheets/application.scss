@@ -25,6 +25,7 @@
 
 html {
     height: 100%;
+    margin: 0;
 }
 body {
     height: 100%;
@@ -102,8 +103,10 @@ nav {
 	display: block;
 }
 .exercise_explination{
-	background-color: rgba(240, 240, 216, .2);
+	background-color: rgba(240, 240, 216, .6);
 	display: inline-block;
+	padding: 1em;
+	font-size: 100%;
 }
 #piece {
 	 background-color: rgba(240, 240, 216, .9);
@@ -231,12 +234,22 @@ nav {
 	margin-top: 300px;
 	background-color: #fff;	
 	height: 75vh;
-	position: static;
+	// position: static;
+	left: 0;
 }
 
 #about {
 	width: 60%;
+	height:100%;
 	margin: 30px auto;
+}
+
+.writers-example {
+	width: 100vw;
+	background-color: #fff;	
+	height: 75vh;
+	// position: static;
+	left: 0;
 }
 
 .push_me {
@@ -274,12 +287,23 @@ nav {
 	background-color: #262626;
 	height: 30vh;
 	width: 100%;	
-	clear: both;
-  position: static;
+	// position: absolute;
+  // margin-top: -150px; /* negative value of footer height */
+  clear:both;
   bottom: 0;
-  left: 0;
+  h1 {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 50px;
+	color: #f0f0d8;
+	padding-bottom: 0;
+	margin-left: 100px;
+	position: absolute;
+  }
 }
 
+main {
+	height: 100%;
+}
 
 
 
