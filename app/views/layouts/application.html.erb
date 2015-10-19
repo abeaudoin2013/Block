@@ -15,21 +15,13 @@
 					<ul>
 						<li><%=link_to "Profile", user_path(@user) %></li>
 						<li><%=link_to "Log Out", sessions_path, method: :delete %></li>
+						<li type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i>Start!</li>
 					</ul>
 			<% end %>	
 		</nav>
 	</header>
 	<main> 
-		<% if current_user %>
-			<div class="row">
-				<div id="exercise-icon" class='col-md-4'>
-					<!-- <form method="post"> -->
-						<p type="button" name="B1" value="Exercise >>" onclick="randomlink()"><i class="ion-edit"></i>Click to begin an exercise!</p> 
-					<!-- </form> -->
 
-				</div>
-			</div>
-		<% end %>
 				<% if flash[:notice] %>
 					<div class="notice"><%=flash[:notice]%></div> 
 				<% end %>
