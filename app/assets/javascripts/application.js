@@ -112,6 +112,19 @@ function count(document_body) {
 	}
 	document.getElementById("c").value = r;
 }
+
+function count() {
+	var y = five_word.value;
+	var r = 0;
+	a = y.replace(/\s/g,' ');
+	a = a.split(' ');
+	for (z = 0; z < a.length; z++) {
+		if(a[z].length > 0)
+			r++;
+	}
+	document.getElementById("d").value = r;
+}
+
 //
 //Random Link!
 var randomlinks=new Array()
