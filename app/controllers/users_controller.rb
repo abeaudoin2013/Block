@@ -13,7 +13,7 @@ before_action :new_user_only, only: [:new]
 		@user = User.create(user_params)
 		if @user.save
 			session[:user_id] = @user.id
-			redirect_to @user, notice: "New accountant"
+			redirect_to @user, notice: "New account created!"
 		else
 			render :new
 		end
@@ -21,7 +21,7 @@ before_action :new_user_only, only: [:new]
 
 	def show
 		@user = User.find(params[:id])
-		@documents = @user.documents.last(10)		
+		@documents = @user.documents.last(10)
 	end
 	
 	def destroy
