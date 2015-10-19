@@ -6,7 +6,7 @@
 			<% unless params[:words] == nil then %>
 			<%	words = params[:words].split(",") %>
 			<% words.each do |m| %>
-				<h3><%= m %></h3>
+				<h3 class='one_of_five'><%= m %></h3>
 			<% end %>
 			<% else %>
 				<% @fives.each do |five| %>
