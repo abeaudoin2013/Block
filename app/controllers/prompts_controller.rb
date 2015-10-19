@@ -8,7 +8,7 @@ class PromptsController < ApplicationController
 	def create
 		@document = Document.create(params.require(:document).permit(:body).merge(user: current_user))
 		if @document.save
-		redirect_to user_path
+		redirect_to current_user
 		else
 			redirect_to prompts_path
 		end

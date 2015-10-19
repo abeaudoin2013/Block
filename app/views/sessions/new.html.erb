@@ -1,9 +1,14 @@
+<div class="container" id="logocontainer">
+	<div class="row">
+		<h1 id="logo">Block..</h1>
+	</div>
+</div>
 <div class="push_me">
 <div class="container">
 <!-- <div id="log-in-container"> -->
 	<div class="row">
-		<div class="col-sm-6">
-					<h1 id="login-btn">Log it in</h1>
+		<div class="col-sm-6 login-box">
+					<h1 id="login-btn">Log In</h1>
 					<div id="login-form">
 						<%= form_tag '/sessions', method: :post do %>
 							<p>
@@ -17,12 +22,10 @@
 							<p>
 								<%= submit_tag "log in", id: :loginbtn %>
 							</p>
-
-
 						<% end %>
 					</div>
 		</div>
-		<div class="col-sm-6">
+		<div class="col-sm-6 sign-up-box">
 
 				<%= render 'users/form' %>
 
@@ -30,3 +33,12 @@
 	</div>
 </div>
 </div>
+<div id="about-us">
+	<div id="about">
+		<h1>About Us</h1>
+		<p>BLA BLA BLA BLAB LAB ABLABLLBA BLABLABLA BLAB ABLAB LAB
+			BLA BLA BLA BLAB LAB ABLABLLBA BLABLABLA BLAB ABLAB LAB BLA BLA BLA BLAB LAB ABLABLLBA BLABLABLA BLAB ABLAB LAB
+			BLA BLA BLA BLAB LAB ABLABLLBA BLABLABLA BLAB ABLAB LAB BLA BLA BLA BLAB LAB ABLABLLBA BLABLABLA BLAB ABLAB LAB
+		</p>
+	</div>
+</div>	

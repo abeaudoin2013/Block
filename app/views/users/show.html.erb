@@ -12,10 +12,12 @@
 	</div>
 	</div>
 	<div class="row">
-		<% for document in @user.documents do %>
-			<div class="col-lg-1">
-				<%= render document %>
-			</div>
-		<% end %>
+		<div class="col-md-12 col-lg-12">
+			<% for document in @user.documents do %>
+				<div class="col-lg-2 col-md-2">
+					<%= render document %>
+				</div>
+			<% end %>
+		</div>
 	</div>
 </div>
