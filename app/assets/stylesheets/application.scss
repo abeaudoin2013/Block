@@ -165,6 +165,7 @@ nav {
 	height: 70vh;
 	padding: 15px;
 	background-color: rgba(255, 217, 152, .8);
+	outline: none;
 }
 #wordCounter {
 	text-weight: 400%;
@@ -201,6 +202,7 @@ nav {
 	height: 70vh;
 	padding: 15px;
 	background-color: rgba(255, 217, 152, .8);
+	outline: none;
 }
 .one_of_five {
 	display: inline-block;
@@ -233,6 +235,7 @@ nav {
 	margin-top: 5%;
 	color: #45453e;
 	text-align: center;
+	height: 250px;
 }
 
 #login-form input,
@@ -256,6 +259,15 @@ nav {
 	height: 50px;
 	width: 175px;
 	margin: 0 auto;
+}
+
+input#loginbtn {
+	margin-top: 57px;
+	width: 100px;
+}
+
+input#signupbtn {
+	width: 100px;
 }
 
 .login-box {
@@ -376,6 +388,11 @@ a:hover {
 }
 #tag {
 	margin: 30px auto 0 auto;
+}
+
+
+#submit {
+	width: 100px;
 }
 
 
