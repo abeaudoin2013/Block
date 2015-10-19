@@ -30,17 +30,13 @@
 				</div>
 			</div>
 		<% end %>
-			<div class="container">
 				<% if flash[:notice] %>
 					<div class="notice"><%=flash[:notice]%></div> 
 				<% end %>
 				<%= yield %>
-			</div>
+				<div id="footer">
+			<h1>Block..</h1>
+		</div>
 		</main>
-		<!-- <div class="container"> -->
-			<div id="footer">
-
-			</div>
-		<!-- </div> -->
 	</body>
 </html>
