@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
 before_action :new_user_only, only: [:new]
 
 	def new
+		@documents = Document.last(5)
 	end
 
 	def create

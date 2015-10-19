@@ -2,7 +2,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1 class='exercise_explination'><%= @prompt.setup %></h1>
+			<h1 class='exercise_explination'>250 Words or more in 10minutes or less...<br><%= @prompt.setup %></h1>
 		</div>
 		<div class="col-lg-12">
 			<%= form_for @document, url: prompts_path, :html => { :onsubmit => "return validateText();" } do |f| %>
