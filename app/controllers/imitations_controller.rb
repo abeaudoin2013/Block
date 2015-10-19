@@ -1,7 +1,7 @@
 class ImitationsController < ApplicationController
 before_action :authorize_user, only: [:create]
 	def index
- 		@piece = Imitation.pluck(:piece).shuffle[0]
+ 		@piece = Imitation.pluck(:piece, :title, :author).shuffle[0]
 		@document = Document.new
 		@user = current_user
 		# blah = "The authorities began setting up roadblocks and checkpoints and deployed police officers and soldiers, in response to what the government called a 'wave of terrorism.'"
