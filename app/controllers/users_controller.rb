@@ -23,11 +23,18 @@ before_action :new_user_only, only: [:new]
 		@user = User.find(params[:id])
 		@documents = @user.documents.last(10)		
 	end
+	
+	def destroy
+		@user = current_user
+		@user.destroy 
+		session[:user_id] = nil
+		redirect_to new_user_path, notice: "User account was deleted."
+	end
 
 private
 
 	def user_params
 		params.require(:user).permit(:username, :email, :password)
 	end
-	
+		
 end
