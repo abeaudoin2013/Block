@@ -21,7 +21,7 @@ before_action :new_user_only, only: [:new]
 
 	def show
 		@user = User.find(params[:id])
-		@documents = Document.all		
+		@documents = @user.documents.last(10)		
 	end
 
 private
