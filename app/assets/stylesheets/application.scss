@@ -19,6 +19,7 @@
 
  ///nice orange #e67e22
  //aqua #10a690
+ //grey #262626
 
  @import 'bootstrap';
 
@@ -60,6 +61,19 @@ nav {
 		font-size: 20px;
 		border-bottom: 1px solid #f0f0d8;
 	}
+}
+
+#logo {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 100px;
+	color: #f0f0d8;
+	padding-top: 200px;
+	padding-left: 400px;
+	padding-bottom: 0;
+}
+
+#logocontainer {
+	height: 20vh;
 }
 
 #exercise-icon {
@@ -196,12 +210,10 @@ nav {
 
 .login-box {
 	padding-left: 365px;
-	padding-top: 60px;
 }
 
 .sign-up-box {
 	padding-right: 365px;
-	padding-top: 60px;
 }
 
 #email,
@@ -215,12 +227,11 @@ nav {
 }
 
 #about-us {
-	width: 100%;
+	width: 100vw;
 	margin-top: 300px;
-	background-color: #f0f0d8;	
+	background-color: #fff;	
 	height: 75vh;
-	position: absolute;
-	left: 0;
+	position: static;
 }
 
 #about {
@@ -233,8 +244,11 @@ nav {
 }
 
 #clockdiv {
-	font-size: 50px;
-	color: #e67e22;
+	font-size: 30px;
+	color: #f0f0d8;
+	background-color: #e67e22;
+	width: 600px;
+	margin: 30px auto;
 	border: 1px solid #e67e22;
 	border-radius: 200px;
 	padding: 10px 30px;
@@ -254,6 +268,16 @@ nav {
 	-ms-transform: rotate(7deg); /* IE 9 */
     -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
     transform: rotate(7deg);
+}
+
+#footer {
+	background-color: #262626;
+	height: 30vh;
+	width: 100%;	
+	clear: both;
+  position: static;
+  bottom: 0;
+  left: 0;
 }
 
 

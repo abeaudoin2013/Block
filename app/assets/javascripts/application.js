@@ -33,9 +33,10 @@
 		var clock = document.getElementById(id);
 		var timeinterval = setInterval(function() {
 			var t = getTimeRemaining(endtime);
-			clock.innerHTML = 
-												'minutes: ' + t.minutes +
-												' seconds: ' + t.seconds;
+			clock.innerHTML =  t.minutes + ' Minutes ' + t.seconds + ' Seconds left....'
+
+												// 'minutes: ' + t.minutes +
+												// ' seconds: ' + t.seconds;
 			if (t.total<=0){
 				clearInterval(timeinterval);
 			}

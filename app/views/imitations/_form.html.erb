@@ -1,11 +1,10 @@
 <div class='form'>
 	<%= form_for @document, url: imitation_doc_path do |f| %>
 	<p>
-
-		<%= f.text_area :body, id: :imitation_typer %>
+		<%= f.text_area :body, id: :imitation_typer, onclick: ("setTenMins('clockdiv')") %>
 	</p>
 	<p>
-		<%= f.submit 'submit', class: 'submitter' %>
+		<%= f.submit "Save", class: 'submitter' %>
 	</p>
 	<% end %>
 </div>
