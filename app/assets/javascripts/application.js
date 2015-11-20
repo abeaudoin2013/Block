@@ -129,9 +129,9 @@ function count() {
 //Random Link!
 var randomlinks=new Array()
 
-randomlinks[0]="http://localhost:3000/prompts"
-randomlinks[1]="http://localhost:3000/five"
-randomlinks[2]="http://localhost:3000/imitation"
+randomlinks[0]="http://stark-falls-7672.herokuapp.com/prompts"
+randomlinks[1]="http://stark-falls-7672.herokuapp.com/five"
+randomlinks[2]="http://stark-falls-7672.herokuapp.com/imitation"
 
 function randomlink(){
 window.location=randomlinks[Math.floor(Math.random()*randomlinks.length)]
