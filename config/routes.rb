@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 #   get '/documents', to: 'documents#edit'
   post '/five', to: 'fives#create'
  
-  post '/imiation', to: 'imitations#create', as: :imitation_doc
+  post '/imitation', to: 'imitations#create', as: :imitation_doc
   get '/login', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   delete '/sessions', to: 'sessions#destroy'
