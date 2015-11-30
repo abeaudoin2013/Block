@@ -1,17 +1,11 @@
-== README
+== Block
 
 Hi, welcome to Block. A rails app designed to help break up writer's block.
 
-Please be sure to run rake db:migrate in the command line. 
+Please be sure to run <tt>rake db:migrate</tt> in the command line. 
 
 Our team has created some prompts that are built in to the repository. 
 
-In order to access them and for the app to function correctly, please run rake db:seed.
+In order to access them and for the app to function correctly, please run <tt>rake db:seed</tt>.
 
 Have fun and keep writing!
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
