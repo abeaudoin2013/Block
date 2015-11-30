@@ -47,7 +47,7 @@
 			<h1>Some of our writers</h1>
 			<% @documents.each do |document| %>
 				<div class="writers-example-doc">
-				<%= document.body %> by <%=link_to document.user.username, user_path(document.user.id) %><br>	
+				<%= document.body %> by <%=link_to document.user.username, user_path(document.user.id), id: :girl_what %><br>	
 				</div>		
 			<% end %>
 	</div>
